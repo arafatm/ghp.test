@@ -7,10 +7,10 @@
 puts "hello world"
 ```
 
-__bold__ _italic_ `code` $math$
+__bold__ _italic_ `code` $x = 2 * x$
 
 $$
-math
+\sumx = 2 * x
 $$
 
 | table | c2 |
