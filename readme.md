@@ -10,7 +10,7 @@ puts "hello world"
 __bold__ _italic_ `code` $x = 2 * x$
 
 $$
-\sumx = 2 * x
+E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
 $$
 
 | table | c2 |
