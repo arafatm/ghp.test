@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/{{ site.github.project_title}}/styles.css">
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script> MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
   <header>
-    <nav>
-      <ul>
-        {% for page in site.pages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg" /></a>
+    <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg" /></a>
   </header>
   <main>
     {{ content }}
   </main>
   <footer>
-    &copy; {{ site.time | date: "%Y" }} {{ site.author }}
   </footer>
 </body>
+
 </html>

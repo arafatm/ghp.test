@@ -1,15 +1,15 @@
 github_username: arafatm
-# markdown: GFM
-# highlighter: rouge
+markdown: GFM
+highlighter: rouge
 
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-titles-from-headings
   - jemoji
-  - jekyll-remote-theme # Support leap-day theme
-
-remote_theme: pages-themes/leap-day@v0.2.0 # https://github.com/pages-themes/leap-day
+#  - jekyll-remote-theme # Support leap-day theme
+# remote_theme: pages-themes/leap-day@v0.2.0 # https://github.com/pages-themes/leap-day
+theme: minima
 
 readme_index:
   enabled:          true
@@ -19,14 +19,14 @@ readme_index:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
 # - jekyll-wikirefs # Not supported by GHP https://pages.github.com/versions/
 #GFM:
@@ -49,4 +49,3 @@ exclude:
 #   articles:
 #     output: true
 #     permalink: /:categories/:name
-
