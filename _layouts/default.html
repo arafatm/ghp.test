@@ -1,34 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      MathJax = { tex: { inlineMath: [['$', '$']] } };
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const textNodes = document.querySelectorAll('p, div'); // Target elements like paragraphs, divs, etc.
+        textNodes.forEach((node) => {
+          node.innerHTML = node.innerHTML.replace(/(#\w+)/g, '<span class="hashtag">$1</span>');
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script> MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body>
-  <header>
-    <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg" /></a>
-    <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg" /></a>
-    Header
-  </header>
-  <nav>
-    <li>Test</li>
-    <li>Test 2</li>
-    <li>Long navbar Long navbar Long navbar Long navbar Long navbar Long navbar </li>
+  <body>
+    <header>
+      <div class="social">
+        <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg"></a>
+        <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg"></a>
+      </div>
+      {{
+        page.name
+        | replace: '/', ''
+        | replace: '.html', ''
+        | replace: '.md', ''
+        | replace: '-', ' '
+        | replace: '_', ' '
+        | capitalize
+      }}
+    </header>
+    <nav>
+      {% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=1 h_max=3 %}
     </nav>
-  </nav>
-  <main>
-    {{ content }}
-  </main>
-  <footer>
-    Footer
-  </footer>
-</body>
-
+    <main>
+      {{ content }}
+    </main>
+    <footer>Footer</footer>
+  </body>
 </html>
