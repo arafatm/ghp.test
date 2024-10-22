@@ -22,10 +22,6 @@
 
   <body>
     <header>
-      <div class="social">
-        <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg"></a>
-        <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg"></a>
-      </div>
       {{
         page.name
         | replace: '/', ''
@@ -35,6 +31,10 @@
         | replace: '_', ' '
         | capitalize
       }}
+      <div class="social">
+        <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg"></a>
+        <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg"></a>
+      </div>
     </header>
     <nav>
       {% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=1 h_max=3 %}
