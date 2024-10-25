@@ -22,7 +22,6 @@
 
   <body>
     <header>
-      arafatm:
       {{
         page.name
         | replace: '/', ''
@@ -35,6 +34,7 @@
       <div class="social">
         <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg"></a>
         <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg"></a>
+        <a href="{{ site.baseurl }}">arafatm</a>
       </div>
     </header>
     <nav>
@@ -43,6 +43,12 @@
     <main>
       {{ content }}
     </main>
-    <footer>Footer</footer>
+    <footer>
+      <div class="social">
+        <a href="https://linkedin.com/in/arafatm"><img class="social" src="assets/images/li.svg"></a>
+        <a href="https://github.com/arafatm"><img class="social" src="assets/images/gh.svg"></a>
+        <a href="{{ site.baseurl }}">arafatm</a>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,4 +1,8 @@
+text 
+
 # Test H1
+
+`bundle exec jekyll serve --livereload`
 
 ## special
 
@@ -46,6 +50,7 @@ some text
 
 Text  some text __bold__ _italic_ `code` $x = 2 * x$ some text
 Text  some text __bold__ _italic_ `code` $x = 2 * x$ some text
+[yahoo](https://www.yahoo.com)
 Text  some text __bold__ _italic_ `code` $x = 2 * x$ some text
 Text  some text __bold__ _italic_ `code` $x = 2 * x$ some text
 - $E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j$
@@ -59,9 +64,13 @@ E(\mathbf{v}, \mathbf{h}) &= \\
                           &= -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
 \end{aligned}$$
 
-| table | c2 |
-| -- | -- |
-| foo | baz |
+| Name         | Position           | Department    | Salary  |
+|--------------|--------------------|---------------|---------|
+| John Doe     | Software Engineer  | Development   | $120,000|
+| Jane Smith   | Product Manager    | Product       | $110,000|
+| Alice Johnson| UX Designer        | Design        | $95,000 |
+| Bob Williams | QA Engineer        | Quality       | $85,000 |
+
 
 # The Future of Renewable Energy # The Future of Renewable Energy # The Future of Renewable Energy # The Future of Renewable Energy
 Renewable energy is becoming a crucial part of the global energy mix as countries strive to reduce carbon emissions.
